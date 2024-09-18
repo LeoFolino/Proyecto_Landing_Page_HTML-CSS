@@ -1,0 +1,206 @@
+/* .trade-winds-regular {
+  font-family: "Trade Winds", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+-----
+.rowdies-light {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rowdies-regular {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rowdies-bold {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+-------
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+--------
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.inconsolata-<uniquifier> {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+------------
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+-----------
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.edu-vic-wa-nt-beginner-<uniquifier> {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* NORMALIZACION: reseteo de algunas caracteristicas para que no tome caracteristicas default del navegador */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Esto mantiene el ancho y alto a pesar de padding y border */
+    font-family: 'Inconsolata', monospace; 
+    list-style: none; /* Sacar los puntos de decoracion de las listas */
+    text-decoration: none; /* Saca el subrayado de los enlaces */
+    color: rgb(0, 0, 0);
+}
+
+body{
+    background-color: black; 
+}
+
+header{
+    position: fixed; /* Para que header quede fijo en la parte superior */
+    right: 0;
+    top: 0;
+    z-index: 100; /* Hace que el Header se muestre por encima */
+    width: 100%;
+    display: flex; /* Coloca todos los elementos en linea */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Hace que los elementos se separen */
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo{
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.navlist{
+  display: flex;
+  
+}
+
+.navlist a{
+  margin-left: 80px;
+  font-size: 30px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 1s ease;
+}
+
+.navlist a:hover{
+  border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+/* #menu-icon{
+  display: none;
+} */
+
+#menu-icon{
+  color: rgb(0, 0, 0);
+  font-size: 45px;
+  z-index: 101; /* Para que este sobre el header*/
+  cursor: pointer; /* Para que aparezca la mano al apoyar el cursor sobre el icono */
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon-action{
+  display: block;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, #729da6 0%, #6698b0 25%, #56565c 75%); /* Fondo gradiente*/
+  position: relative; /* habilita usar top, bottom, left, right*/
+  display: grid; /* para dividir hero en columnas */
+  grid-template-columns: 1fr 1fr; /* divido hero en 2 columnas*/
+  align-items: center; /* alinear verticalmente el hero */
+  gap: 2rem; /* espacio de 2 rem */
+}
+
+.section{
+  padding: 0 8%;
+}
+
+.hero-text h1{
+  font-family: "Trade Winds", system-ui;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 30px;
+
+}
+
+.hero-text h5{
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+
+}
+
+.hero-text h4{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+}
+
+.hero-text p{
+  font-size: 80%;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.hero-img img{
+  width: 70%;
+  margin: 5% 0 0 5%;
+  height: auto;
+  transition: all 1s linear;
+}
+
+.hero-img img:hover{
+  width: 80%;
+  opacity: 0.6;
+}
+
+.hero-text{
+  margin: 100px;
+}
+
+.hero-text a{
+  display: inline-block;
+  background-color: #ba7878;
+  border: 1px solid transparent;
+  padding: 15px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .5s ease;
+}
+
+.hero-text a:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  transform: translateX(10px)
+}
